@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.60 (Windows - x64)">
+  <section name="config">
+    <options closefiles="1" openmode="1" name="MHRD-CPU"/>
+  </section>
+  <section name="data">
+    <explorer view="" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2017-05-03 12:21" user="KeyKon" host="KRUPP-NB2"/>
+  </section>
+  <section name="files">
+    <file name="assembler.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="c2ab9c60799d960b93668441c8452014"/>
+    </file>
+    <file name="main.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="fb5f1f1b6aded45fc54c7cc2d40b1a33"/>
+    </file>
+    <file name="procedures.pbi">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="6404f5a8daac0f0c6feb28b5e39431c1"/>
+    </file>
+  </section>
+  <section name="targets">
+    <target name="Simulator" enabled="1" default="0">
+      <inputfile value="main.pb"/>
+      <outputfile value=""/>
+      <executable value="MHRD-Sim.exe"/>
+      <options asm="1" unicode="1" xpskin="1" debug="1"/>
+      <buildcount enable="0" value="1000"/>
+      <versioninfo enable="1">
+        <field0 value="1,1,0,0"/>
+        <field1 value="1,1,0,0"/>
+        <field2 value="KeyKon"/>
+        <field3 value="MHRD-Sim"/>
+        <field4 value="v1.1"/>
+        <field5 value="v1.1"/>
+        <field6 value="MHRD-Sim"/>
+        <field7 value="MHRD-Sim"/>
+        <field8 value="MHRD-Sim"/>
+        <field9 value="KeyKon"/>
+        <field15 value="VOS_NT"/>
+        <field16 value="VFT_APP"/>
+        <field17 value="0409 English (United States)"/>
+      </versioninfo>
+    </target>
+    <target name="ProcedureTest" enabled="1" default="0">
+      <inputfile value="procedures.pbi"/>
+      <outputfile value=""/>
+      <options debug="1"/>
+      <purifier enable="1"/>
+    </target>
+    <target name="Assembler" enabled="1" default="1">
+      <inputfile value="assembler.pb"/>
+      <outputfile value=""/>
+      <options xpskin="1" debug="1"/>
+      <purifier enable="1"/>
+    </target>
+  </section>
+</project>
