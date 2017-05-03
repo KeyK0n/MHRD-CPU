@@ -1,0 +1,57 @@
+enum 0
+#v_out
+#v_op1
+#v_op2
+#v_counter
+
+
+#op1 = 41
+#op2 = 799
+
+//init
+//set out 0
+mov [#v_out], 0
+//set a 41
+mov [#v_op1], #op1
+//set b 799
+mov [#v_op2], #op2
+//set counter 1
+mov [#v_counter], 1
+
+//IfZero -> jmpend
+mov ar, [#v_op1]
+jz @end, ar
+mov ar, [#v_op2]
+jz @end, ar
+
+mov ar, [#v_counter] 
+
+//loop
+loop:
+  mov mr, #v_op2
+  //checkBit
+  and ar, ar, [mr]
+  
+  //IfSet -> Add
+  jz @f ,ar
+    mov ar, [#v_op1]
+    mov mr, #v_out
+    add [mr], [mr], ar
+  @@
+  //EndIfSet
+  
+  //Shift a,counter << 1
+  mov ar, [#v_op1]
+  add [mr], ar, ar
+  mov ar, [#v_counter]
+  add ar, ar, ar
+  mov [mr], ar
+  jz @end, ar
+
+//loopend
+jmp @loop
+
+//end
+mov mr, @end
+end:
+0 00 0 00 0000 1 00000

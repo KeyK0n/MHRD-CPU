@@ -1,0 +1,30 @@
+All in 16-bit binary, spaces allowed, comments not in same line as instruction.
+
+16    -> Load 15-bit C to MR
+14-13 -> ALU Dest        (01 AR, 10 MR, 11 Data)
+12    -> Op1 ( 0 5-Bit C,  1 AR                )
+11-10 -> Op2 (00 5-Bit C, 01 AR, 10 MR, 11 Data)
+ 9- 7 -> OpCode
+ 6    -> Jump If Zero
+ 5- 1 -> C
+ 
+ //Example writes (4095+4)*-1 to 0x0003
+ 
+ //4095 -> MR
+ 1 000 1111 1111 1111
+ 
+ //MR + 4 -> AR
+ 0 01 0 10 0000 0 00100
+ 
+ //3 -> MR
+ 1 000 0000 0000 0011
+ 
+ //Negate AR -> RAM (Addr = MR = 0x0003)
+ 0 11 0 01 1001 0 00000
+ 
+ //5 -> MR
+ 1 000 0000 0000 0101
+ 
+ //Jmp if Zero (0+0=0) (Addr = MR = 0x0005) (-> Infiniteloop)
+ 0 00 0 00 0000 1 00000
+ 

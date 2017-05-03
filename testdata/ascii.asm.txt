@@ -1,0 +1,115 @@
+#uM = 77
+#uH = 72
+#uR = 82
+#uD = 68
+
+#uK = 75
+#lE = 101
+#lY = 121
+#lo = 111
+#ln = 110
+
+#dEq = 3D3Dh
+
+loop:
+
+//shift M
+mov AR, #uM
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+
+//add H
+mov MR, #uH
+add AR, AR, MR
+
+//write AR to RAM (MH)
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//shift R
+mov AR, #uR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+add AR, AR, AR
+
+//add D
+mov MR, #uD
+add AR, AR, MR
+
+//write AR to RAM (RD)
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//write == to RAM
+mov AR, #dEq
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//write K to RAM
+mov AR, #uK
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//write e to RAM
+mov AR, #lE
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//write y to RAM
+mov AR, #lY
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//write K to RAM
+mov AR, #uK
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//write o to RAM
+mov AR, #lO
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//write n to RAM
+mov AR, #lN
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//write == to RAM
+mov AR, #dEq
+mov MR, [0]
+inc MR
+mov [MR], AR
+mov [0], MR
+
+//Jmp Loop
+jmp @loop

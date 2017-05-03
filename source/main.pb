@@ -3,7 +3,7 @@
 IncludeFile "procedures.pbi"
 
 #Benchmark = 0
-#Ver_Sim = "v1.1 b"
+#Ver_Sim = "v1.0.1 b"
 
 ;---Enumeration
 Enumeration Window
@@ -67,7 +67,7 @@ Define.d hz
 Define.i autoStep
 
 Define.s old
-Define.s instrPath = GetCurrentDirectory()+"example.instr.txt"
+Define.s instrPath = GetCurrentDirectory()+"..\testdata\example.instr.txt"
 Define.s dataPath  = GetCurrentDirectory()
 
 ;---Procedures
@@ -849,7 +849,8 @@ ForEver
 
 
 ; IDE Options = PureBasic 5.60 (Windows - x64)
-; CursorPosition = 5
+; CursorPosition = 69
+; FirstLine = 25
 ; Folding = -4
 ; EnableXP
 ; EnableUnicode

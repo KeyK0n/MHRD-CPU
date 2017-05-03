@@ -1,0 +1,5 @@
+loop:
+mov mr, ar
+mov [mr], mr
+add ar, mr, 1
+jmp @loop

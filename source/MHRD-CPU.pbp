@@ -7,7 +7,7 @@
   <section name="data">
     <explorer view="" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2017-05-03 12:21" user="KeyKon" host="KRUPP-NB2"/>
+    <lastopen date="2017-05-03 14:01" user="KeyKon" host="KRUPP-NB2"/>
   </section>
   <section name="files">
     <file name="assembler.pb">
@@ -16,7 +16,7 @@
     </file>
     <file name="main.pb">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="fb5f1f1b6aded45fc54c7cc2d40b1a33"/>
+      <fingerprint md5="bc4d7f6c522757f96ed23c8f2dea5f9e"/>
     </file>
     <file name="procedures.pbi">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
@@ -24,19 +24,19 @@
     </file>
   </section>
   <section name="targets">
-    <target name="Simulator" enabled="1" default="0">
+    <target name="Simulator" enabled="1" default="1">
       <inputfile value="main.pb"/>
       <outputfile value=""/>
       <executable value="MHRD-Sim.exe"/>
       <options asm="1" unicode="1" xpskin="1" debug="1"/>
       <buildcount enable="0" value="1000"/>
       <versioninfo enable="1">
-        <field0 value="1,1,0,0"/>
-        <field1 value="1,1,0,0"/>
+        <field0 value="1,0,1,0"/>
+        <field1 value="1,0,1,0"/>
         <field2 value="KeyKon"/>
         <field3 value="MHRD-Sim"/>
-        <field4 value="v1.1"/>
-        <field5 value="v1.1"/>
+        <field4 value="v1.0.1"/>
+        <field5 value="v1.0.1"/>
         <field6 value="MHRD-Sim"/>
         <field7 value="MHRD-Sim"/>
         <field8 value="MHRD-Sim"/>
@@ -52,7 +52,7 @@
       <options debug="1"/>
       <purifier enable="1"/>
     </target>
-    <target name="Assembler" enabled="1" default="1">
+    <target name="Assembler" enabled="1" default="0">
       <inputfile value="assembler.pb"/>
       <outputfile value=""/>
       <options xpskin="1" debug="1"/>
