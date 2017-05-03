@@ -1,2 +1,6 @@
 # Executables
 *.exe
+
+# Directories
+**/release/
+**/media/
